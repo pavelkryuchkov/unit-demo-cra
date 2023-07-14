@@ -8,8 +8,27 @@ on:
     # types: [opened, synchronize]
 
 jobs:
-  verify:
-    name: Verify files
+  Linter:
+    name: Linter
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: Install packages
+        run: npm ci
+      - name: Run linter
+        run: npm run lint
+
+jobs:
+  Unit-tests:
+    name: Unit tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -25,6 +44,23 @@ jobs:
         run: npm ci
       - name: Run unit tests
         run: CI=true npm test
+
+jobs:
+  Integration-tests:
+    name: Integration tests
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+      - name: Install packages
+        run: npm ci
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
       - name: Run Playwright tests
