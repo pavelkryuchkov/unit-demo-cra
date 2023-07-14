@@ -26,7 +26,6 @@ jobs:
       - name: Run linter
         run: npm run lint
 
-jobs:
   Unit-tests:
     name: Unit tests
     runs-on: ubuntu-latest
@@ -45,7 +44,6 @@ jobs:
       - name: Run unit tests
         run: CI=true npm test
 
-jobs:
   Integration-tests:
     name: Integration tests
     runs-on: ubuntu-latest
