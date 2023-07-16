@@ -29,7 +29,7 @@ git commit -m "this should fail"
 
 Если всё работает правильно, то должно появиться сообщение об ошибке:
 
-![commitlint error message](./markdown-images/1.png | width=400)
+<img src="./markdown-images/1.png" alt="commitlint error message" width="400">
 
 Теперь можно попробовать закоммитить нормально и запушить в репозиторий:
 
@@ -40,8 +40,9 @@ git push --set-upstream origin branch-[YOUR GITHUB ACCOUNT NAME]
 
 После этого перейди в репозиторий и создай пулл-реквест из ветки `branch-[YOUR GITHUB ACCOUNT NAME]` в ветку `master`. Github Actions должен запустить линтер и тесты:
 
-![pull-request message](./markdown-images/2.png | width=800)
+<img src="./markdown-images/2.png" alt="pull-request message" width="800">
+
 
 Почини заголовок на Странице About. После пуша Github Actions должнен перезапустить тесты:
 
-![pull-request message](./markdown-images/3.png | width=800)
+<img src="./markdown-images/3.png" alt="pull-request message" width="800">
