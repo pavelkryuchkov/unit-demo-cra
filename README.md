@@ -38,11 +38,11 @@ git commit -m "feat: change about title"
 git push --set-upstream origin branch-[YOUR GITHUB ACCOUNT NAME]
 ```
 
-После этого перейди в репозиторий и создай пулл-реквест из ветки `branch-[YOUR GITHUB ACCOUNT NAME]` в ветку `master`. Github Actions должен запустить линтер и тесты:
+После этого перейди в github и создай пулл-реквест из ветки `branch-[YOUR GITHUB ACCOUNT NAME]` в ветку `master`. В качестве base repository выбери `pavelkryuchkov/unit-demo-cra`. Github Actions должен запустить линтер и тесты:
 
 <img src="./markdown-images/2.png" alt="pull-request message" width="800">
 
 
-Почини заголовок на Странице About. После пуша Github Actions должнен перезапустить тесты:
+Почини заголовок на странице About. После пуша Github Actions должнен перезапустить тесты:
 
 <img src="./markdown-images/3.png" alt="pull-request message" width="800">
