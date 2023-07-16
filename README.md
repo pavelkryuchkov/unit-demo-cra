@@ -14,7 +14,7 @@ npm ci
 git checkout -b "branch-[YOUR GITHUB ACCOUNT NAME]"
 ```
 
-В файле `src/pages/About.tsx` измени заголовок. Это нужно, чтобы поломать тесты.
+В файле `src/pages/About.tsx` измени заголовок. Это нужно, чтобы поломать тесты:
 
 ```
 <h1 data-testid="page-title">Not About</h1>
@@ -29,7 +29,7 @@ git commit -m "this should fail"
 
 Если всё работает правильно, то должно появиться сообщение об ошибке:
 
-![commitlint error message](./markdown-images/1.png)
+![commitlint error message](./markdown-images/1.png | width=400)
 
 Теперь можно попробовать закоммитить нормально и запушить в репозиторий:
 
@@ -38,10 +38,10 @@ git commit -m "feat: change about title"
 git push --set-upstream origin branch-[YOUR GITHUB ACCOUNT NAME]
 ```
 
-После этого перейди в репозиторий и создай пулл-реквест из ветки `branch-[YOUR GITHUB ACCOUNT NAME]` в ветк `master`. Github Actions должен запустить линтер и тесты:
+После этого перейди в репозиторий и создай пулл-реквест из ветки `branch-[YOUR GITHUB ACCOUNT NAME]` в ветку `master`. Github Actions должен запустить линтер и тесты:
 
-![pull-request message](./markdown-images/2.png)
+![pull-request message](./markdown-images/2.png | width=800)
 
 Почини заголовок на Странице About. После пуша Github Actions должнен перезапустить тесты:
 
-![pull-request message](./markdown-images/3.png)
+![pull-request message](./markdown-images/3.png | width=800)
