@@ -11,7 +11,7 @@ npm ci
 Создай новую ветку с именем `branch-[YOUR GITHUB ACCOUNT NAME]`:
 
 ```sh
-git checkout -b "branch-[YOUR GITHUB ACCOUNT NAME]"
+git checkout -b branch-[YOUR GITHUB ACCOUNT NAME]
 ```
 
 В файле `src/pages/About.tsx` измени заголовок. Это нужно, чтобы поломать тесты:
