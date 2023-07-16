@@ -29,7 +29,7 @@ git commit -m "this should fail"
 
 Если всё работает правильно, то должно появиться сообщение об ошибке:
 
-<img src="./markdown-images/1.png" alt="commitlint error message" width="400">
+<img src="./markdown-images/1.png" alt="commitlint error message" width="600">
 
 Теперь можно попробовать закоммитить нормально и запушить в репозиторий:
 
